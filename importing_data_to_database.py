@@ -3,18 +3,18 @@ import pandas as pd
 import os
 
 # SQL Server connection setup (Windows Authentication)
-server = 'PC-82DY314'
+server = 'YourServerName' # Update with your server name
 database = 'PointOfInterest'
 
 # Create an engine using SQLAlchemy for Windows Authentication
 engine = create_engine(f'mssql+pyodbc://@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes')
 
 # Base folder path
-base_folder = r'C:\Users\SophieHedges\Documents\PoIData'
+base_folder = r'C:\YourFilePathHere\PoIData' # Update with your file path here
 
 # Subfolders for each city
 folders = {
-    'Manchester': os.path.join(base_folder, 'Machester'),  # note the misspelling "Machester"
+    'Manchester': os.path.join(base_folder, 'Machester'),  # note the misspelling "Machester" (sic)
     'Birmingham': os.path.join(base_folder, 'Birmingham')
 }
 
